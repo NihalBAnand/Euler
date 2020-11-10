@@ -1,3 +1,4 @@
+from math import sqrt
 def isPrime(num):
 	prime = True
 	if num%2 != 0:
@@ -12,11 +13,12 @@ def isPrime(num):
 	if num ==2:
 		prime = True
 	return prime
-currentNum = 1
-primes = []
-while len(primes) < 10001:
-	if isPrime(currentNum):
-		primes.append(currentNum)
-		print(currentNum)
-	currentNum += 1
-print(primes[10000])
+
+def getFactors(num):
+	factors = []
+	div = 1
+	while div < num:
+		if (num % div == 0):
+			factors.append(div)
+		div += 1
+	return factors

@@ -1,4 +1,4 @@
-from math import *
+from math import sqrt
 factors = []
 pFactors = []
 num = 600851475143
