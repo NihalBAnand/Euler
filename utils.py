@@ -15,10 +15,12 @@ def isPrime(num):
 	return prime
 
 def getFactors(num):
-	factors = []
-	div = 1
-	while div < num:
-		if (num % div == 0):
-			factors.append(div)
-		div += 1
-	return factors
+    factors = set({})
+    div = 1
+    while div <= sqrt(num):
+        if (num % div == 0):
+            factors.add(int(div))
+            if (div != 1):
+                factors.add(int(num / div))
+        div += 1
+    return list(factors)
